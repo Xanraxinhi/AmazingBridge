@@ -11,12 +11,13 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/laravel', function () {
     return view('welcome');
 });
 
 Auth::routes();
 
+Route::get('/', 'FontendController@index')->name('index');
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('', 'HomeController@index');
