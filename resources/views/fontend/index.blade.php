@@ -459,7 +459,8 @@
     <section class="full-screen">
         <div class="video-main">
             <video preload="yes" autoplay="" data-setup="{}" id="videobg" loop="" muted="" style="display: block;">
-                <source src="{{ asset('fontend/video/bridge.mp4') }}" type="video/webm; codecs=vp8, vorbis">
+{{--                <source src="{{ asset('fontend/video/bridge.mp4') }}" type="video/webm; codecs=vp8, vorbis">--}}
+                <source src="{{ asset('fontend/video/videoplayback (1).mp4') }}" type="video/webm; codecs=vp8, vorbis">
                 <source src="{{ asset('fontend/video/videoplayback (3).webm') }}" type="video/webm; codecs=vp8, vorbis">
 
             </video>
