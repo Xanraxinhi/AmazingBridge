@@ -12,14 +12,22 @@
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('fontend/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('fontend/css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('fontend/css/style.css') }}">
     @stack('css')
 </head>
 <body>
-    @yield('content')
+    <div class="container">
+        @includeIf('fontend.layouts.header')
 
-    <script src="{{ asset('fontend/js/jquery-3.5.1.slim.min.js') }}"></script>
-    <script src="{{ asset('fontend/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('fontend/js/popper.min.js') }}"></script>
-    @stack('js')
+        @yield('content')
+
+        @includeIf('fontend.layouts.footer',['hideFooter'=>$hideFooter ?? ''])
+
+        <script src="{{ asset('fontend/js/jquery-3.5.1.slim.min.js') }}"></script>
+        <script src="{{ asset('fontend/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('fontend/js/popper.min.js') }}"></script>
+        <script src="{{ asset('fontend/js/app.js') }}"></script>
+        @stack('js')
+    </div>
 </body>
 </html>

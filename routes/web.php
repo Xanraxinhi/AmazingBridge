@@ -18,6 +18,8 @@ Route::get('/laravel', function () {
 Auth::routes();
 
 Route::get('/', 'FontendController@index')->name('index');
+Route::get('country-bridge', 'FontendController@show')->name('bridge.show');
+Route::get('country-bridge/detail', 'FontendController@detail')->name('bridge.detail');
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('', 'HomeController@index');

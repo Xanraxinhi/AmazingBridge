@@ -28,7 +28,6 @@ body{
     background-color: #fff;
     text-rendering: optimizeLegibility;
 	overflow-x: hidden;
-	cursor: pointer;
 }
 
 .style-kdt8vpzrinlineContent{
@@ -47,6 +46,10 @@ body{
     padding: 0;
     height: 70px;
     transition: 0.4s ease all;
+}
+.navbar.scrolled{
+    background: black;
+    transition: background-color 200ms linear;
 }
 
 .navbar ul > li {
@@ -182,7 +185,7 @@ margin: 0 auto;
 
 .link-quire {
     padding: 7px !important;
-    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid lightsteelblue;
 }
 
 .hero-content {
@@ -317,4 +320,35 @@ video#videobg {
     width: auto;
     z-index: 99;
     vertical-align: baseline;
+}
+
+.footer{
+    background-color: black;
+    background-image: url(../img/form-footer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.text-bridge{
+    text-align: center;
+}
+.contries-block h2{
+    text-align: center;
+}
+.container{
+    max-width: 1500px !important;
+}
+
+.show-detail{
+    position: relative;
+}
+
+.title-bridge{
+    position: absolute;
+    top: 50px;
+    right: 140px;
+}
+
+.title-bridge h1{
+    position: fixed;
 }
