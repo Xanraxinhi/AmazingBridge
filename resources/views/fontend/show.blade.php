@@ -36,8 +36,8 @@
             </div>
 
             <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev text-decoration-none" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next text-decoration-none" onclick="plusSlides(1)">&#10095;</a>
 
             <!-- Image text -->
             <div class="caption-container">
@@ -71,7 +71,7 @@
             <div class="contries-block my-5">
                 <h2>Viet Nam</h2>
                 <div class="col-6 offset-3 ">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam at blanditiis cupiditate deserunt dolorem est, exercitationem facilis inventore, iste maiores natus nisi nulla quisquam quo repellat sit suscipit tempore!</p>
+                    <p class="text-center text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam at blanditiis cupiditate deserunt dolorem est, exercitationem facilis inventore, iste maiores natus nisi nulla quisquam quo repellat sit suscipit tempore!</p>
                 </div>
                 <hr>
                 <div class="swiper-container">
