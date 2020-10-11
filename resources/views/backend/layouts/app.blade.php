@@ -12,14 +12,14 @@
 
     <!-- Import lib -->
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/fontawesome-free/css/all.min.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- End import lib -->
 
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/admin-template-style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/alert.css') }}">
 
     @stack('css')
 </head>
-<body class="overlay-scrollbar">
+<body class="overlay-scrollbar sidebar-expand">
 <!-- navbar -->
 <div class="navbar">
     <!-- nav left -->
@@ -207,6 +207,23 @@
 <!-- end sidebar -->
 <!-- main content -->
 <div class="wrapper">
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{ $message }}
+        </div>
+    @endif
+
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <strong>Whoops!</strong> There were some problems with your input.
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>- {{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     @yield('content')
 </div>
 <!-- end main content -->

@@ -21,6 +21,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    public function redirectIndex()
+    {
+        return redirect()->route('home');
+    }
+
     public function index()
     {
         return view('backend.home');

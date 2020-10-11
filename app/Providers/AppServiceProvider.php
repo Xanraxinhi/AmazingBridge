@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\Bridge;
+use App\Country;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +26,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        View::composer('*', function ($view) {
+            $data = [];
+            $data['countries'] = Country::all();
+            $data['bridges'] = Bridge::with('parameter')->latest()->get();
+            $view->with($data);
+        });
     }
 }

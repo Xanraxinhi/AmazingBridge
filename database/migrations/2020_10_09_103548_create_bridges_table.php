@@ -19,6 +19,7 @@ class CreateBridgesTable extends Migration
             $table->text('map')->nullable();
             $table->text('introduce')->nullable();
             $table->tinyInteger('public')->default(1);
+            $table->unsignedBigInteger('country_id')->nullable()->index();
             $table->timestamps();
         });
     }
