@@ -37,6 +37,10 @@
                     </form>
                 </div>
             </div>
+
+            <div class="cteate-table100">
+                <a href="{{ route('country') }}">Back</a>
+            </div>
         </div>
     </div>
 @endsection

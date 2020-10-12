@@ -65,21 +65,21 @@
                                 <tr class="table100-head-custom">
                                     <th class="column1">Famous</th>
                                     <td class="column2">
-                                        <input type="number" name="famous" placeholder="From 0 to 10" min="0" max="10" value="{{ !blank($currentBridge->parameter) ? $currentBridge->parameter->famous : @old('famous') ?? '' }}">
+                                        <input type="number" name="famous" placeholder="From 0 to 10" min="0" max="10" value="{{ !blank($currentBridge->parameter) ? $currentBridge->parameter->famous : @old('famous') ?? '0' }}">
                                     </td>
                                     <td class="column1">( range of famous )</td>
                                 </tr>
                                 <tr class="table100-head-custom">
                                     <th class="column1">Strange</th>
                                     <td class="column2">
-                                        <input type="number" name="strange" placeholder="From 0 to 10" min="0" max="10" value="{{ !blank($currentBridge->parameter) ? $currentBridge->parameter->strange : @old('strange') ?? '' }}">
+                                        <input type="number" name="strange" placeholder="From 0 to 10" min="0" max="10" value="{{ !blank($currentBridge->parameter) ? $currentBridge->parameter->strange : @old('strange') ?? '0' }}">
                                     </td>
                                     <td class="column1">( range of strange )</td>
                                 </tr>
                                 <tr class="table100-head-custom">
                                     <th class="column1">Beautiful</th>
                                     <td class="column2">
-                                        <input type="number" name="beautiful" placeholder="From 0 to 10" min="0" max="10" value="{{ !blank($currentBridge->parameter) ? $currentBridge->parameter->beautiful : @old('beautiful') ?? '' }}">
+                                        <input type="number" name="beautiful" placeholder="From 0 to 10" min="0" max="10" value="{{ !blank($currentBridge->parameter) ? $currentBridge->parameter->beautiful : @old('beautiful') ?? '0' }}">
                                     </td>
                                     <td class="column1">( range of beautiful )</td>
                                 </tr>

@@ -242,6 +242,10 @@ tbody tr:hover {
     cursor: pointer;
 }
 
+.img-fluid{
+    width: 100%;
+}
+
 .column1 {
     width: 120px;
     padding-left: 40px;
@@ -254,6 +258,10 @@ tbody tr:hover {
 .column3 {
     width: 145px;
     text-align: center;
+}
+.column3 iframe{
+    max-width: 100px;
+    max-height: 100px;
 }
 
 .column4 {

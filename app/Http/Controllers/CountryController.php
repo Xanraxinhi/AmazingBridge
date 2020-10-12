@@ -25,11 +25,11 @@ class CountryController extends Controller
             ['id' => $request->idCountry],
             ['name' => $request->name, 'introduce' => $request->introduce]
         );
-        return redirect()->route('country');
+        return redirect()->route('country')->with('success', 'You have successfully update the country .');
     }
 
     public function getDelete($id){
         Country::destroy($id);
-        return redirect()->route('country');
+        return redirect()->route('country')->with('success', 'You have successfully deleted the country.');
     }
 }

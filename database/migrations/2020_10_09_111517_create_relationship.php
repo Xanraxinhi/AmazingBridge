@@ -19,7 +19,7 @@ class CreateRelationship extends Migration
 
         Schema::table('photos', function (Blueprint $table) {
             $table->unsignedBigInteger('bridge_id')->nullable()->index();
-            $table->foreign('bridge_id')->references('id')->on('bridges');
+            $table->foreign('bridge_id')->references('id')->on('bridges')->onDelete('cascade');
         });
 
         Schema::table('parameters', function (Blueprint $table) {

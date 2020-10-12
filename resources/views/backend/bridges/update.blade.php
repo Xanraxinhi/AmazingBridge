@@ -25,7 +25,7 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <input type="hidden" name="idCountry" value="{{ isset($currentBridge) ? $currentBridge->id : '' }}">
+                                <input type="hidden" name="idBridge" value="{{ isset($currentBridge) ? $currentBridge->id : '' }}">
 
                                 <td class="column1">
                                     <input type="text" name="name" placeholder="Name" value="{{ isset($currentBridge) ? $currentBridge->name : '' }}">
@@ -51,7 +51,7 @@
                                 <td class="column5">
                                     <!-- Rounded switch -->
                                     <label class="switch">
-                                        <input name="public" type="checkbox" {{ isset($currentBridge) && $currentBridge->public == 1 ? 'checked' : '' }} value="1">
+                                        <input name="public" checked type="checkbox" {{ isset($currentBridge) && $currentBridge->public == 1 ? 'checked' : '' }} value="1">
                                         <span class="slider round"></span>
                                     </label>
                                 </td>

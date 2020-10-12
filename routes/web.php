@@ -31,9 +31,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         Route::get('edit/{id}', 'BridgeController@getEdit')->name('bridge.edit');
         Route::get('delete/{id}', 'BridgeController@getDelete')->name('bridge.delete');
         Route::post('update', 'BridgeController@postUpdate')->name('bridge.update');
+
+        /* view list image */
+        Route::get('list-photo-bridge/{id}', 'BridgeController@getListPhoto')->name('bridge.photo.list');
         /* view update image */
-        Route::get('photo-bridge/{id}', 'BridgeController@getPhoto')->name('bridge.photo');
+        Route::get('photo-bridge', 'BridgeController@getPhoto')->name('bridge.photo');
         Route::post('update-photo', 'BridgeController@postUpdatePhoto')->name('bridge.update.photo');
+        Route::get('deletephoto/{id}', 'BridgeController@getDeletePhoto')->name('brige.delete.photo');
+
         /* view update parameter */
         Route::get('parameter-bridge/{id}', 'BridgeController@getParameter')->name('bridge.parameter');
         Route::post('update-parameter', 'BridgeController@postUpdateParameter')->name('bridge.update.parameter');

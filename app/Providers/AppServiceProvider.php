@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
         View::composer('*', function ($view) {
             $data = [];
             $data['countries'] = Country::all();
-            $data['bridges'] = Bridge::with('parameter')->latest()->get();
+            $data['bridges'] = Bridge::with(['photos','parameter'])->latest()->get();
             $view->with($data);
         });
     }

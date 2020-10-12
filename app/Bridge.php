@@ -11,7 +11,8 @@ class Bridge extends Model
         'map',
         'introduce',
         'public',
-        'country_id'
+        'country_id',
+        'idBridge'
     ];
 
     public function country(){
@@ -19,5 +20,8 @@ class Bridge extends Model
     }
     public function parameter(){
         return $this->hasOne(Parameter::class);
+    }
+    public function photos(){
+        return $this->hasMany(Photo::class);
     }
 }

@@ -113,7 +113,7 @@
 <div class="sidebar">
     <ul class="sidebar-nav">
         <li class="sidebar-nav-item">
-            <a href="{{ route('home') }}" class="sidebar-nav-link active">
+            <a href="{{ route('home') }}" class="sidebar-nav-link {{ request()->routeIs('home') ? 'active' : '' }}">
                 <div>
                     <i class="fas fa-tachometer-alt"></i>
                 </div>
@@ -123,7 +123,7 @@
             </a>
         </li>
         <li class="sidebar-nav-item">
-            <a href="{{ route('bridge') }}" class="sidebar-nav-link">
+            <a href="{{ route('bridge') }}" class="sidebar-nav-link {{ request()->routeIs('bridge*') ? 'active' : '' }}">
                 <div>
                     <i class="fab fa-accusoft"></i>
                 </div>
@@ -131,7 +131,7 @@
             </a>
         </li>
         <li class="sidebar-nav-item">
-            <a href="{{ route('country') }}" class="sidebar-nav-link">
+            <a href="{{ route('country') }}" class="sidebar-nav-link {{ request()->routeIs('country*') ? 'active' : '' }}">
                 <div>
                     <i class="fas fa-tasks"></i>
                 </div>

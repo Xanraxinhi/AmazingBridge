@@ -29,10 +29,10 @@
                         @foreach($bridges as $bridge)
                             <tr>
                                 <td class="column1">{{ $bridge->name }}</td>
-                                <td class="column1"><a href="{{ route('bridge.photo', $bridge->id) }}">Photo</a></td>
-                                <td class="column1"><a href="{{ route('bridge.parameter', $bridge->id) }}">Parameter</a></td>
-                                <td class="column2">{{ $bridge->introduce }}</td>
-                                <td class="column3"><a href="javascript:void(0);">View map</a></td>
+                                <td class="column1"><a href="{{ route('bridge.photo.list', $bridge->id) }}">Detail</a></td>
+                                <td class="column1"><a href="{{ route('bridge.parameter', $bridge->id) }}">Detail</a></td>
+                                <td class="column2">{{ Str::limit($bridge->introduce, 100) }}</td>
+                                <td class="column3">{!! $bridge->map !!}</td>
                                 <td class="column4">{{ $bridge->country->name }}</td>
                                 <td class="column5"><span class="{{ $bridge->public == 1 ? 'btn-public' : 'btn-nonpublic'}}">{{ $bridge->public == 1 ? 'Public' : 'No Public'}}</span></td>
                                 <td class="column6">
