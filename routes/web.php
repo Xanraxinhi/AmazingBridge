@@ -17,10 +17,14 @@ Route::get('/laravel', function () {
 
 Auth::routes();
 
+//  Fontend
 Route::get('/', 'FontendController@index')->name('index');
-Route::get('country-bridge', 'FontendController@show')->name('bridge.show');
-Route::get('country-bridge/detail', 'FontendController@detail')->name('bridge.detail');
+Route::get('country-bridge', 'FontendController@showCountryBridge')->name('showCountryBridge');
+Route::get('classify-bridge', 'FontendController@showClassifyBridge')->name('showClassifyBridge');
+Route::get('bridge/detail', 'FontendController@detail')->name('bridge.detail');
+Route::post('newContact', 'FontendController@postContact')->name('contact.create');
 
+//  Backend
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('', 'HomeController@redirectIndex');
     Route::get('/dashboard', 'HomeController@index')->name('home');
@@ -50,5 +54,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
        Route::get('edit/{id}', 'CountryController@getEdit')->name('country.edit');
        Route::get('delete/{id}', 'CountryController@getDelete')->name('country.delete');
        Route::post('update', 'CountryController@postUpdate')->name('country.update');
+    });
+
+    Route::group(['prefix' => 'contacts'], function () {
+        route::get('', 'HomeController@contact')->name('contact');
+        route::get('delete/{id}', 'HomeController@contactDelete')->name('contact.delete');
     });
 });

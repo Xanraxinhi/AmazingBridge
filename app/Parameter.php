@@ -19,4 +19,8 @@ class Parameter extends Model
         'bridge_id',
         'idParameter'
     ];
+
+    public function bridge() {
+        return $this->belongsTo(Bridge::class);
+    }
 }

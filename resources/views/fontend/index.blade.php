@@ -24,6 +24,7 @@
             }
             #comp-kdt8vpzfinlineContent-gridWrapper {
                 pointer-events: none;
+                display: none;
             }
 
             #comp-kdt8vpzfinlineContent-gridContainer {
@@ -330,7 +331,7 @@
 
             </video>
             <div class="hero-content">
-                <div class="hero-content-inner">
+                <div class="hero-content-inner" style="display:none;">
                     <h1 class="font-bolds ">EXPERIENCE THE BRIDGES</h1>
                     <h2 class="wow fadeInUp white"></h2>
                     <div class="wow fadeIn">
